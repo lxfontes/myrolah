@@ -8,6 +8,16 @@ Checks if a node is master or slave, returning HTTP 200 if all is good.
 - Mysql-MHA is great, but corosync/pacemaker across DCs is not a good idea
 - Running a local/centralized HAProxy doesn't hurt (search for airbnb's synapse/nerve combo)
 
+## Installation
+
+    go get github.com/lxfontes/myrolah
+
+    $ myrolah  -h
+    Usage of myrolah:
+    -lag=30: Slave Lag
+    -master=":7555": Master HTTP Check Port
+    -slave=":7556": Slave HTTP Check Port
+    -url="root:@tcp(127.0.0.1:3306)/information_schema": DB URL
 
 ## Checks
 
